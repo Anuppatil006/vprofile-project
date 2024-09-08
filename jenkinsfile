@@ -30,7 +30,7 @@ pipeline {
             }
         }
         stage('Deploy') {
-            steps {ssh -i /path/to/your/key.pem ec2-user@${EC2_PUBLIC_IP} 'docker pull ${REPOSITORY_URI}:latest && docker run -d -p 8080:8080 ${REPOSITORY_U>
+            steps {ssh -i /path/to/your/key.pem ubuntu@${EC2_PUBLIC_IP} 'docker pull ${REPOSITORY_URI}:latest && docker run -d -p 8080:8080 ${REPOSITORY_U>
                     """
                     sh command
                 }
