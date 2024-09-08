@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        IMAGE_NAME = 'my-app'
+        IMAGE_NAME = 'node:14'
         REGISTRY = 'aws_account_id.dkr.ecr.region.amazonaws.com'
         REPOSITORY_URI = "${REGISTRY}/${IMAGE_NAME}"
         EC2_INSTANCE_ID = 'i-043d8645253e9d2ba'
